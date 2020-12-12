@@ -1,0 +1,17 @@
+-- Datapath
+--
+--
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Mux32_2x1 is
+	port(   I1, I0 : IN std_logic_vector(31 downto 0);
+                s   : in STD_LOGIC;
+                R : OUT std_logic_vector(31 downto 0)
+	);
+end entity;
+
+architecture rtl of Mux32_2x1 is
+begin
+    R <= I1 when s='1' else I0;
+end rtl;

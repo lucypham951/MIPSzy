@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\thuon\Desktop\4165\lab9_mipzy_skel\simulation\modelsim
+Edm
+Z1 w1607736314
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\thuon\Desktop\4165\lab9_mipzy_skel\simulation\modelsim
+Z6 8C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/DM.vhd
+Z7 FC:/Users/thuon/Desktop/4165/lab9_mipzy_skel/DM.vhd
+l0
+L10
+VKjDPZ5NgOi70^o@VbIERZ3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1607775582.727000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/DM.vhd|
+Z11 !s107 C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/DM.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 i9kjmU@dYW9jALNbPY]BD1
+!i10b 1
+Abeh
+R2
+R3
+R4
+DEx4 work 2 dm 0 22 KjDPZ5NgOi70^o@VbIERZ3
+l21
+L17
+V`XhDz`E250XZ9_0K6ZjA^0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 KOT5;RL9L=OzUjJ[17M0]2
+!i10b 1
+Edm_vhd_tst
+Z14 w1607775286
+R3
+R4
+R5
+Z15 8C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/simulation/modelsim/DM.vht
+Z16 FC:/Users/thuon/Desktop/4165/lab9_mipzy_skel/simulation/modelsim/DM.vht
+l0
+L30
+V:Y=FOQU3Bk_I8PW9c@`531
+!s100 3<PPD@H0[:=5Hi^5d>ECM2
+R8
+31
+!i10b 1
+Z17 !s108 1607775582.926000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/simulation/modelsim/DM.vht|
+Z19 !s107 C:/Users/thuon/Desktop/4165/lab9_mipzy_skel/simulation/modelsim/DM.vht|
+R12
+R13
+Adm_arch
+R3
+R4
+DEx4 work 10 dm_vhd_tst 0 22 :Y=FOQU3Bk_I8PW9c@`531
+l53
+L32
+V8j^W;`8ABGW:I3;hYFDcj0
+!s100 B`Xhl;d^F:>59c[BM^`Em0
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

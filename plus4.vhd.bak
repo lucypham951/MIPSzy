@@ -1,0 +1,18 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+--USE ieee.std_logic_unsigned.ALL; -- synopsis-developed file not recommended for new designs
+--USE ieee.std_logic_arith.ALL;   
+USE ieee.numeric_std.ALL;          -- IEEE-developed file forces explicit typing
+-- Common type casts 
+-- std_logic_vector(S)			std_logic_vector(U) 			-- from U/S to V
+-- signed(V)						unsigned(V)						-- from V to U/S
+
+ENTITY plus4 IS
+PORT (D: IN std_logic_vector(11 DOWNTO 0);
+		Q: OUT std_logic_vector(11 DOWNTO 0));
+END plus4;
+
+ARCHITECTURE Beh OF plus4 IS BEGIN PROCESS(D) BEGIN
+		Q <= std_logic_vector(unsigned(D) + x"004");
+end process;
+END Beh;

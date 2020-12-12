@@ -1,0 +1,50 @@
+-- IM - an implementation of (16 words of) a 2^10 x 32 ROMArrayType
+--  adapted from vahid_3ip K. Nickels 8/21/18
+--
+-- ROM_I - an implementation of (16 words of) a 2^16 by 16 
+--  Read Only Memory
+--
+--  Adapted from Figure 5.29 (p122) "VHDL for Digital Logic Design" 
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+--USE ieee.std_logic_unsigned.ALL; -- synopsis-developed file not recommended for new designs
+--USE ieee.std_logic_arith.ALL;   
+USE ieee.numeric_std.ALL;          -- IEEE-developed file forces explicit typing
+
+ENTITY IM IS
+    PORT (a: IN std_logic_vector(9 DOWNTO 0);
+    ld: IN std_logic;
+	 clk: IN std_logic;
+    d: OUT std_logic_vector(31 DOWNTO 0) );
+END IM;
+
+ARCHITECTURE Beh OF IM IS
+    TYPE ROMArrayType IS ARRAY(0 TO 15)  -- only implement 16 words
+        OF std_logic_vector(31 DOWNTO 0);  -- of 32 bits
+    CONSTANT MemA: ROMArrayType := (
+     -- Program in PA 8.7.4
+			x"200E1388", -- addi $t6, $zero, 5000
+			x"8DC80000", -- lw $t0, 0($t6) # Load from DM[5000]
+			x"01084820", -- add $t1, $t0, $t0 # Double the value
+			x"ADC90000", -- sw $t1, 0($t6) # Store to DM[5000]
+        X"FFFFFFFF", -- 4
+        X"FFFFFFFF", -- 5
+        X"FFFFFFFF", -- 6
+        X"FFFFFFFF", -- 7
+        X"FFFFFFFF", -- 8
+        X"FFFFFFFF", -- 9
+        X"FFFFFFFF", -- a
+        X"FFFFFFFF", -- b
+        X"FFFFFFFF", -- c
+        X"FFFFFFFF", -- d
+        X"FFFFFFFF", -- e
+        X"FFFFFFFF"); -- f
+BEGIN  
+    PROCESS(clk)
+    BEGIN
+		if ld='1' and rising_edge(clk) then
+        d <= MemA(to_integer(unsigned(a(3 DOWNTO 0))));
+		end if;  
+    END PROCESS;
+END Beh; 

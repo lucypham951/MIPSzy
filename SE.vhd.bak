@@ -1,0 +1,20 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+--USE ieee.std_logic_unsigned.ALL; -- synopsis-developed file not recommended for new designs
+--USE ieee.std_logic_arith.ALL;   
+USE ieee.numeric_std.ALL;          -- IEEE-developed file forces explicit typing
+
+ENTITY SE IS
+PORT (D: IN std_logic_vector(15 DOWNTO 0);
+		Q: OUT std_logic_vector(31 DOWNTO 0));
+END SE;
+
+ARCHITECTURE Beh OF SE IS 
+BEGIN PROCESS(D) BEGIN
+if D(15)='1' then
+		Q <= x"1111" & D;
+else
+		Q <= x"0000" & D;
+end if;
+end process;
+END Beh;
